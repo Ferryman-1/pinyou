@@ -1,0 +1,349 @@
+.main {
+  width: 980px;
+  height: 455px;
+  margin-left: 220px;
+  margin-top: 10px;
+}
+
+.main .focus {
+  float: left;
+  width: 721px;
+  height: 455px;
+  background-color: purple;
+}
+
+.main .newsflash {
+  float: right;
+  width: 250px;
+  height: 455px;
+}
+
+.news {
+  height: 165px;
+  border: 1px solid #e4e4e4;
+}
+
+.news-hd {
+  height: 33px;
+  line-height: 33px;
+  border-bottom: 1px dotted #e4e4e4;
+  padding: 0 15px;
+}
+
+.news-hd h5 {
+  float: left;
+  font-size: 14px;
+}
+
+.news-hd .more {
+  float: right;
+  font-size: 12px;
+}
+
+.news-hd .more::after {
+  font-family: 'icomoon';
+  content: '\e920';
+}
+
+.news-bd {
+  padding: 5px 15px 0;
+}
+
+.news-bd ul li {
+  height: 24px;
+  line-height: 24px;
+  /* 先强制一行内显示文本 */
+  white-space: nowrap;
+  /* 超出的部分隐藏 */
+  overflow: hidden;
+  /* 文字用省略号替代超出的部分 */
+  text-overflow: ellipsis;
+}
+
+.lifeservice {
+  /* 超出盒子部分切掉 */
+  overflow: hidden;
+  height: 209px;
+  border: 1px solid #e4e4e4;
+  border-top: 0;
+}
+
+/* 修改li的父亲ul宽度大小 要大于252px*/
+.lifeservice ul {
+  width: 255px;
+}
+
+.lifeservice ul li {
+  position: relative;
+  float: left;
+  height: 70px;
+  /* li63*4=252>250 装不开 修改.lifeservice ul*/
+  width: 63px;
+  border-right: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  text-align: center;
+}
+
+.lifeservice ul li img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.lifeservice ul li i {
+  display: inline-block;
+  width: 18px;
+  height: 24px;
+  margin-top: 12px;
+  background: url(../images/icons.png) no-repeat -19px -16px;
+}
+
+.bargain {
+  margin-top: 5px;
+}
+
+/* 推荐模块 */
+.recom {
+  height: 163px;
+  margin-top: 12px;
+}
+
+.recom_hd {
+  float: left;
+  /* width: 205px; */
+  width: 204px;
+  height: 163px;
+  padding-top: 30px;
+  text-align: center;
+  background-color: #5c5251;
+
+}
+
+
+.recom_bd {
+  float: left;
+}
+
+/* 掉下来了宽度不够 */
+/* 249*4 +205=1201>1200 把.recom_hd里的 width: 2045x;改为width: 204px;*/
+.recom_bd ul li {
+  position: relative;
+  float: left;
+}
+
+/* 上传的所有图片都是相同的宽和高 */
+.recom_bd ul li img {
+  width: 249px;
+  height: 163px;
+}
+
+/* 选择前边三个li 添加边框 */
+.recom_bd ul li:nth-child(-n+3)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 1px;
+  height: 145px;
+  background-color: #ddd;
+}
+
+.geren .w {
+  margin-top: 30px;
+}
+
+.like_hd {
+  height: 28px;
+}
+
+.like_hd h4 {
+  float: left;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.like_hd a {
+  float: right;
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.like_hd a::after {
+  font-family: 'icomoon';
+  padding-left: 10px;
+  padding-right: 18px;
+  content: '\ea2e';
+
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+/* 200*6=1200+2=1204>1200 即把img里的width改为199px*/
+.like_bd {
+
+  border: 1px solid #ededed;
+}
+
+.like_bd ul li {
+  position: relative;
+  float: left;
+}
+
+.like_bd ul li img {
+  width: 199px;
+  height: 232px;
+}
+
+/* 选择前边五个li 添加边框 */
+.like_bd ul li:nth-child(-n+5)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 160px;
+  width: 1px;
+  height: 62px;
+  background-color: #ededed;
+}
+
+.chuangzhi_hd {
+  height: 28px;
+}
+
+.chuangzhi_hd h4 {
+  float: left;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.chuangzhi_bd {
+  width: 1206px;
+  height: 406px;
+  border: 1px solid #ededed;
+}
+
+.chuangzhi_bd_fl {
+  height: 404px;
+  width: 404px;
+  float: left;
+}
+
+.chuangzhi_bd_center {
+  float: left;
+  height: 406px;
+  width: 632px;
+  border-right: 1px solid #ededed;
+}
+
+.chuangzhi_bd_center_top {
+  width: 633px;
+  height: 248px;
+  float: left;
+  border-bottom: 1px solid #ededed;
+}
+
+.chuangzhi_bd_center_bottom {
+  width: 633px;
+  float: left;
+}
+
+.chuangzhi_bd_fr {
+  width: 164px;
+  float: left;
+  border-bottom: 1px solid #ededed;
+}
+
+.chuangzhi_bd_center_top ul li {
+  float: left;
+}
+
+.chuangzhi_bd_center_bottom ul li {
+  float: left;
+}
+
+.box_hd {
+  height: 30px;
+  border-bottom: 2px solid #c81623;
+}
+
+.box_hd h3 {
+  float: left;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.tab_list {
+  float: right;
+  line-height: 30px;
+}
+
+.tab_list ul li {
+  float: left;
+}
+
+.tab_list ul li a {
+  margin: 0 15px;
+}
+
+.floor .w {
+  margin-top: 30px;
+}
+
+.box_bd {
+  height: 360px;
+}
+
+.tab_list_item>div {
+  float: left;
+}
+
+.col_210 {
+  height: 360px;
+  width: 210px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.col_210 ul {
+  padding-left: 12px;
+}
+
+.col_210 ul li {
+  float: left;
+  width: 85px;
+  height: 34px;
+  border-bottom: 1px solid #ededed;
+  text-align: center;
+  line-height: 33px;
+  margin-right: 10px;
+}
+
+.col_329 {
+  width: 329px;
+}
+
+.col_221 {
+  width: 221px;
+  border-right: 1px solid #ededed;
+}
+
+.col_219 {
+  width: 219px;
+}
+
+/* 一般情况下，a如果有包含宽度的盒子，a需要转换为块级元素 */
+.bb {
+  display: block;
+  border-bottom: 1px solid #ededed;
+}

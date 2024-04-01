@@ -1,0 +1,340 @@
+/* 声明字体图标 这里一定要注意路径的变化*/
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?tomleg');
+  src: url('../fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?tomleg') format('truetype'),
+    url('../fonts/icomoon.woff?tomleg') format('woff'),
+    url('../fonts/icomoon.svg?tomleg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/* 版心 */
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.style_red {
+  color: #c81623;
+}
+
+/* 快捷导航模块 */
+.shortcut {
+  height: 30px;
+  line-height: 30px;
+  background-color: #f1f1f1;
+}
+
+.shortcut ul li {
+  float: left;
+}
+
+/* 下边距0是因为父盒子有高度, */
+/* 只要调一边的margin另一个方向不用外边距 */
+/* 选择所有的偶数的小li */
+.shortcut .fr ul li:nth-child(even) {
+  width: 1px;
+  height: 12px;
+  background-color: #666;
+  margin: 9px 15px 0;
+}
+
+.arrow-icon::after {
+  font-family: 'icomoon';
+  content: '\e91e';
+  margin-left: 6px;
+}
+
+/* header头部模块 */
+.header {
+  position: relative;
+  height: 105px;
+}
+
+/* 子绝父相 */
+.logo {
+  position: absolute;
+  top: 25px;
+  width: 171px;
+  height: 61px;
+
+}
+
+.logo h1 a {
+  display: block;
+  width: 171px;
+  height: 61px;
+  background: url(../images/logo.png) no-repeat;
+  /* 京东的做法让文字隐藏 */
+  /* font-size: 0; */
+  /* 淘宝的做法 */
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.search {
+  position: absolute;
+  left: 348px;
+  top: 24px;
+  /* 测量时记得把边框量进去 */
+  width: 540px;
+  height: 38px;
+  border: 2px solid #b1191a;
+}
+
+/* 量的时候不要量边框，因为input在盒子内侧 */
+.search input {
+  float: left;
+  width: 454px;
+  height: 34px;
+  padding-left: 10px;
+}
+
+.search button {
+  float: left;
+  height: 34px;
+  width: 82px;
+  background-color: #b1191a;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* li是块元素，会竖着排列，所以直接用a比较合适 */
+.hotwords {
+  position: absolute;
+  left: 348px;
+  top: 70px;
+}
+
+.hotwords a {
+  margin: 0 10px;
+}
+
+.shopcar {
+  position: absolute;
+  top: 24px;
+  right: 62px;
+  width: 140px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border: 1px solid #dfdfdf;
+  background-color: #f7f7f7;
+}
+
+.shopcar::before {
+  font-family: 'icomoon';
+  content: '\e93a';
+  margin-right: 7px;
+  color: #b1191a;
+}
+
+.shopcar::after {
+  font-family: 'icomoon';
+  content: '\e920';
+  margin-left: 15px;
+}
+
+.count {
+  position: absolute;
+  top: -5px;
+  /* 左对齐 */
+  left: 105px;
+  /* 右对齐 */
+  /* right: 18px; */
+  height: 14px;
+  line-height: 14px;
+  color: #fff;
+  background-color: #e60012;
+  padding: 0 6px;
+  border-radius: 7px 7px 7px 0;
+}
+
+.nav {
+  height: 47px;
+  border-bottom: 2px solid #b1191a;
+}
+
+.dropdown {
+  width: 210px;
+  height: 45px;
+  float: left;
+  background-color: #b1191a;
+}
+
+.dropdown .dt {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  line-height: 45px;
+  font-size: 16px;
+}
+
+.dropdown .dd {
+  width: 210px;
+  height: 465px;
+  background-color: #c81623;
+  margin-top: 2px;
+}
+
+/* 子绝父相 */
+.dropdown .dd ul li {
+  position: relative;
+  height: 31px;
+  line-height: 31px;
+  padding-left: 10px;
+  margin-left: 2px;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* after是孩子 li是父亲 */
+.dropdown .dd ul li::after {
+  position: absolute;
+  top: 1px;
+  right: 10px;
+  font-family: 'icomoon';
+  content: '\e920';
+}
+
+.dropdown .dd ul li:hover {
+  color: #c81623;
+  background-color: #f7f7f7;
+}
+
+.dropdown .dd ul li a {
+  color: #fff;
+}
+
+/* 鼠标经过li a链接里的字变颜色 */
+.dropdown .dd ul li:hover a {
+  color: #c81623;
+}
+
+.navitems {
+  float: left;
+}
+
+.navitems ul li {
+  float: left;
+  color: #333333;
+}
+
+/* a点击的范围更大，用户的体验会更好 */
+.navitems ul li a {
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  font-size: 16px;
+  padding: 0 25px;
+}
+
+/* 底部模块 */
+.footer {
+  height: 418px;
+  background-color: #f5f5f5;
+  padding-top: 30px;
+}
+
+.mod-service {
+  height: 80px;
+  border-bottom: 2px solid #ededed;
+}
+
+.mod-service ul li {
+  float: left;
+  width: 240px;
+  height: 50px;
+  /* 外边距就是盒子外的距离，当然会被挤出去，内边距是盒内距离 */
+  padding-left: 38px;
+}
+
+.mod-service ul li h5 {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background: url(../images/icons.png) no-repeat;
+  margin-right: 5px;
+}
+
+.mod-service ul li .zheng {
+  background-position: -253px -3px;
+}
+
+.mod-service ul li .ji {
+  background-position: -255px -54px;
+}
+
+.mod-service ul li .wu {
+  background-position: -257px -106px;
+}
+
+.mod-service ul li .te {
+  background-position: -258px -157px;
+}
+
+.mod-service ul li .bang {
+  background-position: -258px -209px;
+}
+
+.service_txt h4 {
+  font-size: 14px;
+  color: #333333;
+}
+
+.service_txt p {
+  font-size: 12px;
+  color: #666666;
+}
+
+.mod-help {
+  height: 188px;
+  padding-top: 22px;
+  padding-left: 50px;
+  border-bottom: 2px solid #ededed;
+}
+
+.mod-help dl {
+  float: left;
+  width: 200px;
+}
+
+.mod-help dl:last-child {
+  width: 95px;
+  text-align: center;
+}
+
+.mod-help dl dt {
+  padding-bottom: 13px;
+  font-size: 16px;
+  color: #333;
+}
+
+.mod-copyright {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.links {
+  padding-bottom: 16px;
+}
+
+.copyright {
+  line-height: 20px;
+}
+
+.links a {
+  padding: 0 5px;
+}
